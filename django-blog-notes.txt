@@ -1,0 +1,175 @@
+=================================================
+create a project name => blog_main
+create a app name => 
+=================================================
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/SurajPawar15-smart/django_blog.git
+git push -u origin main
+
+python -m venv env
+env\Scripts\activate
+pip install Django
+django-admin startproject blog_main .
+python manage.py runserver
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser
+
+=================================================
+settings:
+=================================================
+TEMPLATES = [
+..
+'DIRS': ['templates'],
+..
+]
+
+=================================================
+urls.py => blog_main
+=================================================
+from django.contrib import admin
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.home,name='home')
+]
+
+=================================================
+create a file => views.py => blog_main
+=================================================
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse('<h1>This is the heading</h1>')
+
+or
+
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def home(request):
+    return render(request,'home.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
