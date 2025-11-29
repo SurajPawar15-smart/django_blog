@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - 404</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: #121212;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 100px;
+            font-weight: 800;
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn-home {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 25px;
+            font-size: 18px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .btn-home:hover {
+            background: #ffdb4d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="error-container">
+    <h1>404</h1>
+    <h3>Oops! Page Not Found</h3>
+    <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+
+    <a href="{% static 'home.html' %}" class="btn btn-home">Go Back Home</a>
+</div>
+
+</body>
+</html>
